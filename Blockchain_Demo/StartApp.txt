@@ -1,0 +1,3 @@
+Run this from the terminal to start the RxBlockchainApp.py Streamlit app:
+
+streamlit run RxBlockchainApp.py --server.port 8501 --server.address 0.0.0.0
