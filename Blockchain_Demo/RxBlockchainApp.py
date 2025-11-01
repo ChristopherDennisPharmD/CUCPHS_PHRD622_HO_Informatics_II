@@ -132,13 +132,33 @@ for block in rx_chain.chain:
 
 
 # --------------------------
-# Tampering Demonstration (for teaching)
+# Tampering Demonstration (Interactive)
 # --------------------------
-# Uncomment these lines to simulate an attack on the blockchain:
-# if len(rx_chain.chain) > 1:
-#     rx_chain.chain[1].transactions[0]["drug_name"] = "Fentanyl 100mg"  # malicious change
-#     rx_chain.chain[1].hash = rx_chain.chain[1].compute_hash()  # recalc this block's hash only
-#     st.warning("⚠️ A past block was manually tampered with for demonstration!")
+
+st.subheader("🧪 Tamper Mode Demonstration")
+
+st.markdown("""
+Enable **Tamper Mode** to simulate what happens if someone tries to
+alter a previously mined prescription.  
+This will intentionally corrupt Block #1 (if it exists) and show
+how the blockchain detects the change.
+""")
+
+if st.checkbox("🔧 Enable Tamper Mode (for demo)"):
+    if len(rx_chain.chain) > 1:
+        # Choose which field to tamper for demonstration
+        original_drug = rx_chain.chain[1].transactions[0]["drug_name"]
+        rx_chain.chain[1].transactions[0]["drug_name"] = "TamperedDrug 999mg"
+        rx_chain.chain[1].hash = rx_chain.chain[1].compute_hash()
+
+        st.warning(
+            f"⚠️ Block #1 has been **tampered**! "
+            f"Original drug: '{original_drug}' → Now: 'TamperedDrug 999mg'"
+        )
+    else:
+        st.info("Not enough blocks yet. Please mine at least one new block first.")
+else:
+    st.info("Tamper Mode is OFF — the blockchain remains intact.")
 
 
 # --------------------------
