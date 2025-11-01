@@ -131,34 +131,63 @@ for block in rx_chain.chain:
         st.json(block.transactions)
 
 
+### TODO: Need to fix the tampering/repair demonstration code.
 # --------------------------
-# Tampering Demonstration (Interactive)
+# Tampering Demonstration (Interactive + Repair)
 # --------------------------
 
-st.subheader("🧪 Tamper Mode Demonstration")
+# st.subheader("🧪 Tamper Mode Demonstration")
 
-st.markdown("""
-Enable **Tamper Mode** to simulate what happens if someone tries to
-alter a previously mined prescription.  
-This will intentionally corrupt Block #1 (if it exists) and show
-how the blockchain detects the change.
-""")
+# st.markdown("""
+# Use this section to simulate tampering and repair of the blockchain.
+# - **Tamper Mode** changes a past prescription (Block #1).
+# - **Repair Chain** re-mines each block sequentially to restore integrity.
+# """)
 
-if st.checkbox("🔧 Enable Tamper Mode (for demo)"):
-    if len(rx_chain.chain) > 1:
-        # Choose which field to tamper for demonstration
-        original_drug = rx_chain.chain[1].transactions[0]["drug_name"]
-        rx_chain.chain[1].transactions[0]["drug_name"] = "TamperedDrug 999mg"
-        rx_chain.chain[1].hash = rx_chain.chain[1].compute_hash()
+# # Initialize a tampering flag in session state
+# if "tampered" not in st.session_state:
+#     st.session_state.tampered = False
 
-        st.warning(
-            f"⚠️ Block #1 has been **tampered**! "
-            f"Original drug: '{original_drug}' → Now: 'TamperedDrug 999mg'"
-        )
-    else:
-        st.info("Not enough blocks yet. Please mine at least one new block first.")
-else:
-    st.info("Tamper Mode is OFF — the blockchain remains intact.")
+# col_tamper, col_repair = st.columns(2)
+
+# with col_tamper:
+#     tamper_mode = st.checkbox("🔧 Enable Tamper Mode (for demo)", value=st.session_state.tampered)
+
+#     if tamper_mode and not st.session_state.tampered:
+#         # Only tamper once per activation
+#         if len(rx_chain.chain) > 1:
+#             original_drug = rx_chain.chain[1].transactions[0]["drug_name"]
+#             rx_chain.chain[1].transactions[0]["drug_name"] = "TamperedDrug 999mg"
+#             rx_chain.chain[1].hash = rx_chain.chain[1].compute_hash()
+#             st.session_state.tampered = True
+#             st.warning(
+#                 f"⚠️ Block #1 has been **tampered**! "
+#                 f"Original drug: '{original_drug}' → Now: 'TamperedDrug 999mg'"
+#             )
+#         else:
+#             st.info("Not enough blocks yet. Please mine at least one new block first.")
+#     elif not tamper_mode and st.session_state.tampered:
+#         # Turning tamper mode off just toggles the flag (doesn't auto-repair)
+#         st.session_state.tampered = True  # keep flag until repaired
+#         st.info("Tamper mode turned off. Use 'Repair Chain' below to fix integrity.")
+#     else:
+#         st.info("Tamper mode is off — blockchain currently unmodified.")
+
+# # --------------------------
+# # Chain Repair Function
+# # --------------------------
+# def repair_chain(blockchain):
+#     """Recompute hashes from genesis to restore continuity."""
+#     for i in range(1, len(blockchain.chain)):
+#         blockchain.chain[i].previous_hash = blockchain.chain[i - 1].hash
+#         blockchain.chain[i].hash = blockchain.chain[i].compute_hash()
+
+# with col_repair:
+#     if st.button("🛠️ Repair Chain"):
+#         repair_chain(rx_chain)
+#         st.session_state.tampered = False
+#         st.success("✅ Chain repaired! All hashes recomputed to restore integrity.")
+
 
 
 # --------------------------
