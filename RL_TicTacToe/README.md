@@ -8,7 +8,7 @@ Files
 Quick start (PowerShell)
 
 ```powershell
-streamlit run tic_tac_toe_rl_app.py
+streamlit run tictactoe_app.py
 ```
 
 What to try in class
