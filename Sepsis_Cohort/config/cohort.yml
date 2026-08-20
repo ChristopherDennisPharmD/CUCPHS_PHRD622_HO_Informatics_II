@@ -1,0 +1,54 @@
+schema_version: "1.0"
+module: sepsis_cohort
+purpose: "Synthetic longitudinal inpatient cohort for sepsis informatics education"
+synthetic_only: true
+
+composition:
+  total_encounters: 100
+  aggregate_strata:
+    true_sepsis: 4
+    infection_without_sepsis: 16
+    noninfectious_sepsis_mimic: 20
+    background_hospitalization: 60
+
+time_windows:
+  baseline_hours: [0, 6]
+  early_course_hours: [6, 24]
+  hospital_course_start_hour: 24
+  relative_time_origin: admission_or_presentation
+  timezone_policy: one_documented_timezone
+
+encounter_schema:
+  required_domains:
+    - encounter_key
+    - event_time
+    - admission_context
+    - demographics_and_comorbidities
+    - vital_signs
+    - laboratory_results
+    - cultures_and_infection_evidence
+    - antimicrobial_exposure
+    - organ_function
+    - supportive_interventions
+    - documentation_and_provenance
+    - disposition
+  event_level_fields:
+    - encounter_key
+    - event_key
+    - event_time
+    - event_type
+    - value
+    - unit
+    - source_system
+    - missingness_reason
+  derived_fields_require_provenance: true
+
+public_release_rules:
+  patient_level_truth_labels: forbidden
+  aggregate_counts: allowed
+  patient_identifiers: forbidden
+  real_external_identifiers: forbidden
+  instructor_answer_keys: forbidden
+  generation_seeds: private
+  adjudication_notes: private
+  evaluation_data: private_or_separately_distributed

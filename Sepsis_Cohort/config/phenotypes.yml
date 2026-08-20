@@ -1,0 +1,88 @@
+schema_version: "1.0"
+library: sepsis_phenotypes
+status: public_teaching_specification
+assignment_policy: "No patient-level phenotype assignments are stored in this repository."
+
+phenotypes:
+  - id: sepsis_candidate
+    display_name: "Sepsis candidate"
+    description: "Infection evidence and temporally relevant acute organ dysfunction should both be evaluated."
+    signal_domains:
+      - infection_source_and_cultures
+      - antimicrobial_timing
+      - acute_organ_function
+      - supportive_interventions
+      - temporal_ordering
+      - documentation_quality
+    required_reasoning:
+      - define_infection_evidence
+      - define_acute_change_and_baseline
+      - define_attribution_and_time_window
+    ambiguity_sources:
+      - delayed_results
+      - incomplete_baseline
+      - chronic_abnormalities
+      - competing_diagnoses
+
+  - id: infection_without_sepsis_candidate
+    display_name: "Infection without sepsis candidate"
+    description: "Infectious evidence is present, but the specified acute organ dysfunction requirement is not established."
+    signal_domains:
+      - infection_source_and_cultures
+      - antimicrobial_timing
+      - vital_signs
+      - organ_function
+      - baseline_context
+    ambiguity_sources:
+      - treatment_before_arrival
+      - mild_or_transient_changes
+      - negative_or_delayed_cultures
+      - chronic_abnormalities
+
+  - id: noninfectious_mimic_candidate
+    display_name: "Noninfectious sepsis mimic candidate"
+    description: "Acute physiology may resemble sepsis while a noninfectious explanation is plausible."
+    signal_domains:
+      - acute_physiology
+      - organ_function
+      - differential_diagnosis
+      - infection_evidence
+      - treatment_and_support
+    example_competing_explanations:
+      - trauma
+      - pancreatitis
+      - pulmonary_embolism
+      - medication_effect
+      - cardiogenic_process
+      - autoimmune_inflammation
+      - postoperative_physiology
+    ambiguity_sources:
+      - nonspecific_inflammation
+      - empiric_antimicrobials
+      - overlapping_diagnoses
+
+  - id: background_hospitalization_candidate
+    display_name: "Background hospitalization candidate"
+    description: "Realistic inpatient context without a strong sepsis pattern."
+    signal_domains:
+      - admission_context
+      - comorbidities
+      - routine_vitals_and_labs
+      - care_transitions
+      - missingness_and_provenance
+    example_contexts:
+      - elective_procedure
+      - chronic_disease_management
+      - uncomplicated_injury
+      - routine_postoperative_care
+    ambiguity_sources:
+      - ordinary_inpatient_variation
+      - incomplete_documentation
+
+cross_cutting_requirements:
+  preserve_event_time: true
+  preserve_missingness_reason: true
+  distinguish_observation_from_interpretation: true
+  prevent_temporal_leakage: true
+  allow_indeterminate_results: true
+  require_feature_provenance: true
