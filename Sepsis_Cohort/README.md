@@ -15,6 +15,7 @@ The module is a teaching specification, not a clinical decision-support tool. Al
 - `docs/phenotype_library.md` - public phenotype concepts, observable signals, and ambiguity rules.
 - `config/cohort.yml` - machine-readable cohort totals, encounter schema, and data-governance rules.
 - `config/phenotypes.yml` - machine-readable phenotype concepts and signal domains.
+- `week01/` - introductory demonstration showing how fragmented information limits clinical review.
 
 ## Student-facing use
 
