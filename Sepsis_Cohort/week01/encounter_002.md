@@ -25,6 +25,8 @@ The following documents were collected from different parts of the hospital reco
 | 16:00 | 37.8 C | 88 | 112/66 | 18 | 97% on room air |
 | 20:00 | 37.2 C | 82 | 118/70 | 16 | 97% on room air |
 
+\newpage
+
 ## Laboratory Report
 
 **Specimen collection:** April 7, 13:52

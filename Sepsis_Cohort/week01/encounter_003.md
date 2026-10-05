@@ -25,6 +25,8 @@ The following documents were collected from different parts of the hospital reco
 | May 19, 15:20 | Ondansetron 4 mg IV | Given |
 | May 19, 16:02 | Lactated Ringer's 1,000 mL IV | Started |
 
+\newpage
+
 ## Laboratory Report
 
 **Specimen collection:** May 19, 14:22

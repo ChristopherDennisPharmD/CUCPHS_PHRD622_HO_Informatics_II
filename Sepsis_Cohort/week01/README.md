@@ -27,3 +27,13 @@ By the end of the demonstration, students should be able to:
 Divide the class into groups and assign one chart packet to each group. Multiple groups may review the same packet. Give students approximately 10 minutes to answer the clinical-information questions without expecting a complete clinical workup. After groups report their findings, reveal the structured summary and ask them to reconsider their answers.
 
 All patients and events in this module are synthetic. The cases are instructional examples and are not clinical decision-support specifications.
+
+## Markdown files converted to PDF
+
+Markdown files are loaded to GitHub site. PDFs are generated locally using Quarto with TinyTeX but are not currently being uploaded to GitHub site.
+
+### Example conversion from Markdown to PDF
+quarto render encounter_001.md --to pdf
+
+### Rendering the PDF in a web browser
+explorer.exe encounter_001.pdf

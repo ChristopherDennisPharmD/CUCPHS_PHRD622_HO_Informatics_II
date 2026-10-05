@@ -31,6 +31,8 @@ The following documents were collected from different parts of the hospital reco
 
 Prior outpatient laboratory result from two months earlier lists serum creatinine as 0.9 mg/dL.
 
+\newpage
+
 ## Nursing Flowsheet Extract
 
 | Time | Temperature | Heart rate | Blood pressure | Respiratory rate | SpO2 |

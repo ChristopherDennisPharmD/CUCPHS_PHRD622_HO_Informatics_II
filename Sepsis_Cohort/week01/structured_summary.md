@@ -15,6 +15,8 @@ This view reorganizes the information from the three fragmented chart packets. I
 | Subsequent course | BP and fever partially improved; oxygen continued | Vitals normalized; no acute mental-status change | Vitals and lactate normalized; tolerating oral fluids |
 | Important uncertainty | Culture results, lactate collection time, allergy discrepancy | Reliability of imported baseline SCr; final culture result | Reason cultures were discontinued; later clinical course |
 
+\newpage
+
 ## Timeline view
 
 ### Encounter 001
@@ -37,6 +39,8 @@ This view reorganizes the information from the three fragmented chart packets. I
 | 14:40 | IV fluid administered |
 | 15:10 | Ceftriaxone administered |
 | 16:00-20:00 | Vital signs improve; no acute mental-status change documented |
+
+\newpage
 
 ### Encounter 003
 
