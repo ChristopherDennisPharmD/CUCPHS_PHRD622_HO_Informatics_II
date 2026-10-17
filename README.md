@@ -17,7 +17,7 @@ This repository will contain artifacts for PHRD-622 Health Outcomes and Informat
 ## Pharmacy Informatics First Impressions
 In Week #1, the students are asked "In your own words, describe the term pharmacy informatics" and this is what they came up with:
 
-![PHRD622 2025 Describe Pharmacy Informatics](Informatics_WordCloud/WordCloud_Images/PHRD622%20WordCloud%202025.png)
+![PHRD622 2026 Describe Pharmacy Informatics](Informatics_WordCloud/WordCloud_Images/PHRD622%20WordCloud%202026.png)
 
-*Virtual Index Card 2025*
+*Virtual Index Card 2026*
 

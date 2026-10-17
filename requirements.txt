@@ -2,6 +2,7 @@ ipykernel
 jupyterlab
 notebook
 numpy
+openpyxl
 pandas
 matplotlib
 requests
