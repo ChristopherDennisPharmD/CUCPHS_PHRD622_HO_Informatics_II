@@ -20,7 +20,7 @@ By the end of the demonstration, students should be able to:
 
 - `facilitation_guide.md` - recommended timing and discussion prompts.
 - `student_activity.md` - group instructions and response questions.
-- `data/mixed_source_extract.csv` - source-system records used in the activity.
+- `data/mixed_source_extract.xlsx` - source-system records used in the activity.
 - `standardized_reveal.md` - organized representation revealed after discussion.
 - `slide_sequence.md` - concise slide-ready prompts and teaching points.
 
