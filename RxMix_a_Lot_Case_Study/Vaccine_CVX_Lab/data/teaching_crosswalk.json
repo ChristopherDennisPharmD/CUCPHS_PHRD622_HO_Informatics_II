@@ -1,0 +1,11 @@
+{
+  "source": "Selected NDC-to-CVX relationships transcribed for educational use from CDC NDC Lookup Crosswalk; checked October 2026. Not a comprehensive or continuously updated terminology service.",
+  "entries": {
+    "58160-0823-11": {"cvx_code": "187", "cvx_description": "zoster recombinant", "vaccine_group": "RZV", "package": "unit of sale"},
+    "58160-0828-03": {"cvx_code": "187", "cvx_description": "zoster recombinant", "vaccine_group": "RZV", "package": "unit of use"},
+    "58160-0849-43": {"cvx_code": "187", "cvx_description": "zoster recombinant", "vaccine_group": "RZV", "package": "unit of use"},
+    "58160-0849-52": {"cvx_code": "187", "cvx_description": "zoster recombinant", "vaccine_group": "RZV", "package": "unit of sale"},
+    "00006-4119-03": {"cvx_code": "165", "cvx_description": "HPV9", "vaccine_group": "HPV", "package": "unit of sale"},
+    "00006-4119-01": {"cvx_code": "165", "cvx_description": "HPV9", "vaccine_group": "HPV", "package": "unit of use"}
+  }
+}

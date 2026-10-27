@@ -1,0 +1,6 @@
+data/workspace.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+__pycache__/
+.pytest_cache/
