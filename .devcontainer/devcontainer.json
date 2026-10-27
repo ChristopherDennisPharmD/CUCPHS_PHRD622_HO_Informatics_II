@@ -6,7 +6,8 @@
     "vscode": {
       "extensions": [
         "ms-toolsai.jupyter",
-        "ms-python.python"
+        "ms-python.python",
+        "sqlite-db-explorer.sqlite-db-explorer"
       ]
     }
   }
