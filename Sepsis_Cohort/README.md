@@ -18,6 +18,8 @@ The module is a teaching specification, not a clinical decision-support tool. Al
 - `week01/` - introductory demonstration showing how fragmented information limits clinical review.
 - `week02/` - data-standards demonstration showing how local representations affect cohort retrieval.
 - `week03/` - interoperability demonstration showing why clinical exchange requires both messaging and document standards.
+- `week04_05/` - modular activities on governing clinical information and presenting it safely within EHR workflows; the two modules can be taught together or separated.
+- `week06_07/` - capstone reflection materials comparing rule-based and predictive-model intelligence for sepsis clinical decision support.
 
 ## Student-facing use
 
